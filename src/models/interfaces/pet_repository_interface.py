@@ -3,7 +3,7 @@ from ..sqlite.entities.pets import Pets
 
 class IPetsRepository(ABC):
     @abstractmethod
-    def list(self) -> list[Pets]:
+    def find_all(self) -> list[Pets]:
         pass
     @abstractmethod
     def delete(self, name: str) -> None:

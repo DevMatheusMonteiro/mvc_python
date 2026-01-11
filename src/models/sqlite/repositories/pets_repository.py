@@ -6,7 +6,7 @@ class PetsRepository(IPetsRepository):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
-    def list(self) -> list:
+    def find_all(self) -> list:
         with self.__db_connection as db:
             try:
                 pets = db.session.query(Pets).all()

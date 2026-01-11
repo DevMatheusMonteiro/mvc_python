@@ -41,7 +41,7 @@ class MockConnectionNoResult:
 def test_list_pets():
     mock_connection = MockConnection()
     repo = PetsRepository(mock_connection)
-    response = repo.list()
+    response = repo.find_all()
 
 
     mock_connection.session.query.assert_called_once_with(Pets)
@@ -56,7 +56,7 @@ def test_list_pets():
 def test_list_pets_no_result():
     mock_connection = MockConnectionNoResult()
     repo = PetsRepository(mock_connection)
-    response = repo.list()
+    response = repo.find_all()
 
 
     mock_connection.session.query.assert_called_once_with(Pets)
