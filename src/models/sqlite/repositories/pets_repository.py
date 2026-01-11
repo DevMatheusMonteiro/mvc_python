@@ -1,7 +1,8 @@
 from sqlalchemy.orm.exc import NoResultFound
 from ..entities.pets import Pets
+from ...interfaces.pet_repository_interface import IPetsRepository
 
-class PetsRepository:
+class PetsRepository(IPetsRepository):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
