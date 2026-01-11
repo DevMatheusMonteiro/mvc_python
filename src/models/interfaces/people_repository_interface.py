@@ -7,5 +7,5 @@ class IPeopleRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_id(self, person_id: int) -> People | None:
+    def find(self, person_id: int) -> People | None:
         pass

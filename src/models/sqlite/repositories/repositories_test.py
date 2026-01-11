@@ -26,7 +26,7 @@ def test_create_person():
 @pytest.mark.skip(reason="Interaction with database - requires database setup")
 def test_get_person_by_id():
     repo = PeopleRepository(db_connection_handler)
-    person = repo.get_by_id(1)
+    person = repo.find(1)
     assert person is not None
     assert person.first_name == "John"
     assert person.last_name == "Doe"

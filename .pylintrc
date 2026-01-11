@@ -5,6 +5,7 @@ disable=
       C0115, # missing-class-docstring
       C0116, # missing-function-docstring
       W0703, # Catching too general exception Exception
+      W0719, # broad-exception-raised
       C0209, # Consider using f-string
       E0015, # unrecognized-option
       R0903, # too-few-public-methods

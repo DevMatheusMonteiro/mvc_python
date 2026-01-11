@@ -22,7 +22,7 @@ class PeopleRepository(IPeopleRepository):
                 db.session.rollback()
                 raise e
 
-    def get_by_id(self, person_id: int) -> People | None:
+    def find(self, person_id: int) -> People | None:
         with self.__db_connection as db:
             try:
                 person = (
