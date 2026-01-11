@@ -1,7 +1,7 @@
 {
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "cSpell.words": ["pylint", "sessionmaker"],
+  "cSpell.words": ["outerjoin", "pylint", "sessionmaker"],
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": { "when": "$(basename).py" },
