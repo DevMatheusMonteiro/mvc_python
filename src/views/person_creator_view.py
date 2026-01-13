@@ -1,7 +1,7 @@
+from src.controllers.interfaces.person_creator_controller_interface import IPersonCreatorController
 from .interfaces.view_interface import IView
 from .http_types.http_request import HttpRequest
 from .http_types.http_response import HttpResponse
-from src.controllers.interfaces.person_creator_controller_interface import IPersonCreatorController
 
 class PersonCreatorView(IView):
     def __init__(self, controller: IPersonCreatorController):
