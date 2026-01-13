@@ -1,7 +1,8 @@
 import re
 from ..models.interfaces.people_repository_interface import IPeopleRepository
+from .interfaces.person_creator_controller_interface import IPersonCreatorController
 
-class PersonCreatorController:
+class PersonCreatorController(IPersonCreatorController):
     def __init__(self, people_repository: IPeopleRepository) -> None:
         self.__people_repository = people_repository
 

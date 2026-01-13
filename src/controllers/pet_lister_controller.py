@@ -1,7 +1,8 @@
 from ..models.interfaces.pet_repository_interface import IPetsRepository
 from ..models.sqlite.entities.pets import Pets
+from .interfaces.pet_lister_controller_interface import IPetListerController
 
-class PetListerController:
+class PetListerController(IPetListerController):
     def __init__(self, pet_repository: IPetsRepository) -> None:
         self.__pet_repository = pet_repository
 
