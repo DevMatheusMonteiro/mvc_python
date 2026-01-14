@@ -6,7 +6,7 @@ class PersonCreatorController(IPersonCreatorController):
     def __init__(self, people_repository: IPeopleRepository) -> None:
         self.__people_repository = people_repository
 
-    def create(self, data: dict) -> None:
+    def create(self, data: dict) -> dict:
         first_name=data["first_name"]
         last_name=data["last_name"]
         age=data["age"]

@@ -3,5 +3,5 @@ from abc import ABC, abstractmethod
 class IPersonCreatorController(ABC):
 
     @abstractmethod
-    def create(self, data: dict) -> None:
+    def create(self, data: dict) -> dict:
         pass
