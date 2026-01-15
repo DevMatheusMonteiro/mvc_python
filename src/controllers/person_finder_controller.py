@@ -1,3 +1,4 @@
+from src.errors.error_types.http_not_found import HttpNotFoundError
 from ..models.interfaces.people_repository_interface import IPeopleRepository
 from ..models.sqlite.entities.people import People
 from .interfaces.person_finder_controller_interface import IPersonFinderController
@@ -12,7 +13,7 @@ class PersonFinderController(IPersonFinderController):
     def __find_by_id_in_db(self, person_id: int) -> People:
         person = self.__people_repository.find(person_id)
         if not person:
-            raise Exception("Person not found.")
+            raise HttpNotFoundError("Person not found.")
         return person
 
     def __format_response(self, person_data: People) -> dict:
