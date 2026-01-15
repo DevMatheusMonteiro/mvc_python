@@ -23,7 +23,7 @@ def test_create_person():
     repo = PeopleRepository(db_connection_handler)
     repo.create("John", "Doe", 30, 2)
 
-@pytest.mark.skip(reason="Interaction with database - requires database setup")
+# @pytest.mark.skip(reason="Interaction with database - requires database setup")
 def test_get_person_by_id():
     repo = PeopleRepository(db_connection_handler)
     person = repo.find(1)

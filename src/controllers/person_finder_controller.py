@@ -16,6 +16,7 @@ class PersonFinderController(IPersonFinderController):
         return person
 
     def __format_response(self, person_data: People) -> dict:
+        print(person_data)
         return {
             "data": {
                 "type": "Person",

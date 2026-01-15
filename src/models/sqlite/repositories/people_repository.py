@@ -33,6 +33,7 @@ class PeopleRepository(IPeopleRepository):
                         .with_entities(
                             People.first_name,
                             People.last_name,
+                            People.age,
                             Pets.name.label("pet_name"),
                             Pets.type.label("pet_type")
                         ).one()

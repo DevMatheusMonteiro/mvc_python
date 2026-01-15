@@ -8,5 +8,6 @@ class PetListerView(IView):
         self.__controller = controller
 
     def handle(self, http_request: HttpRequest) -> HttpResponse:
+        print(http_request.body)
         found_pets = self.__controller.list_pets()
         return HttpResponse(status_code=200, body=found_pets)
